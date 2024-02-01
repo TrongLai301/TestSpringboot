@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+</head>
+<body>
+<a href="/homestay">Back to list</a>
+<h1>Delete Homestay</h1>
+<h3>Do you sure about your choose</h3>
+<label for="name">Name:</label>
+<p id="name" th:text="${homeStayS.get().name}"></p>
+<label for="numberOfRoom">NumberOfRooms:</label>
+<p id="numberOfRoom" th:text="${homeStayS.get().numberOfRooms}"></p>
+<label for="price">Price:</label>
+<p id="price" th:text="${homeStayS.get().price}"></p>
+<label for="NumberOfBathrooms">NumberOfBathrooms:</label>
+<p id="NumberOfBathrooms" th:text="${homeStayS.get().numberOfBathrooms}"></p>
+<label for="description">Description:</label>
+<p id="description" th:text="${homeStayS.get().description}"></p>
+<label for="city">city:</label>
+<p id="city" th:text="${homeStayS.get().city.name}"></p>
+<form th:action="@{/homestay/remove}" method="post" >
+    <input type="hidden" th:value="${id}" name="id">
+    <input type="submit" value="Yes">
+</form>
+<button><a href="/homestay">No</a></button>
+</body>
+</html>

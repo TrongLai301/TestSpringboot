@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>infomation</title>
+</head>
+<body>
+<a href="/homestay">Back to list</a>
+<h1>Infomation</h1>
+<input type="hidden" th:value="${listHomeStay.get().id}">
+<label for="name">Name:</label>
+<p id="name" th:text="${listHomeStay.get().name}"></p>
+<label for="numberOfRoom">NumberOfRooms:</label>
+<p id="numberOfRoom" th:text="${listHomeStay.get().numberOfRooms}"></p>
+<label for="price">Price:</label>
+<p id="price" th:text="${listHomeStay.get().price}"></p>
+<label for="NumberOfBathrooms">NumberOfBathrooms:</label>
+<p id="NumberOfBathrooms" th:text="${listHomeStay.get().numberOfBathrooms}"></p>
+<label for="description">Description:</label>
+<p id="description" th:text="${listHomeStay.get().description}"></p>
+<label for="city">city:</label>
+<p id="city" th:text="${listHomeStay.get().city.name}"></p>
+
+</body>
+</html>

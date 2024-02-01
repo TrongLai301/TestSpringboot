@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<a href="/homestay">Back to list</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="homestay : ${listHomeStay}">
+        <td><a th:text="${homestay.name}" th:href="@{/homestay/info/{id}(id = ${homestay.id})}"></a></td>
+        <td th:text="${homestay.city.name}"></td>
+        <td th:text="${homestay.price}"></td>
+        <td>
+            <a th:href="@{/homestay/edit/{id}(id = ${homestay.id})}">Edit</a>
+            <p>|</p>
+            <a th:href="@{/homestay/delete/{id}(id = ${homestay.id})}">Delete</a>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>
